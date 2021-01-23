@@ -1,14 +1,14 @@
-import {StoryPart, Heading, SubHeading} from "Styles.js"; // I do have a problem here, and in line 8, should it be memory of memories ?
+import {StoryPart, Heading, SubHeading} from "./Styles.js"; // I do have a problem here, and in line 8, should it be memory of memories ?
 
 const Story = (props) => (
         <StoryPart>
-            <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/1.jpg" alt="" /></div>
-                <div class="timeline-panel">
+            <div className="timeline-image"><img className="rounded-circle img-fluid" src="assets/1.jpg" alt="" /></div>
+                <div className="timeline-panel">
                     <Heading>
-                        <h4>{props.memories.date}</h4>  
-                        <SubHeading>{props.memories.title}</SubHeading>
+                        <h4>{props.memory.date}</h4>  
+                        <SubHeading>{props.memory.title}</SubHeading>
                     </Heading>
-                <div class="timeline-body"><p class="text-muted">{props.memories.story}</p></div>
+                <div className="timeline-body"><p className="text-muted">{props.memory.story}</p></div>
             </div>
         </StoryPart>
 );

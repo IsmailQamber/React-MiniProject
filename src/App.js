@@ -5,6 +5,12 @@ import memories from './memories';
 
 function App() {
 
+        const memoryList = memories.map((memory) => (
+    
+            <Story key = {memory.id} memory = {memory}/>
+        
+        ));
+
   document.title = "My time line";
   return (
     <div class="container">
@@ -13,10 +19,7 @@ function App() {
         <h3 class="section-subheading text-muted">My Coding Jurnney</h3>
     </div>
     <ul class="timeline">
-        <Story key = {memories.id === 1}/>
-        <Story key = {memories.id === 2}/>
-        <Story key = {memories.id === 3}/>
-        <Story key = {memories.id === 4}/>
+        {memoryList}
         <li class="timeline-inverted">
             <div class="timeline-image">
                 <h4>
